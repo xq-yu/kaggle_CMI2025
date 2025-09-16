@@ -36,7 +36,7 @@ The quaternion data could become more inconsistent because the entire quaternion
 
 ### 4.Model
 The architecture is illustrated below, key idea is to use multiple branches to deal with different input channels.
-![pic](https://ibb.co/SXrZb67k)
+![pic](https://i.ibb.co/4Zd0zFgb/model.png)
 
 ### 5.Results
 - IMU only models - CV: 0.8283
