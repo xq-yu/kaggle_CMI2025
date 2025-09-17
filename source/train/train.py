@@ -167,9 +167,9 @@ def train(model,dataset_train,dataset_val,fold_id,config,log,device):
                 best_f1 = f1
                 best_epoch = epoch
                 if EMA:
-                    best_model_weight = ema.ema_model.state_dict()
+                    best_model_weight = copy.deepcopy(ema.ema_model.state_dict())
                 else:
-                    best_model_weight = model.state_dict()
+                    best_model_weight = copy.deepcopy(model.state_dict())
                 best_logits = logits
             
             elif early_stop and (((epoch-best_epoch)>patient) and (epoch>=50)):
