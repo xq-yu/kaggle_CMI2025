@@ -6,7 +6,7 @@ If you run into any trouble with the setup/code or have any questions please con
 |---|---|
 |source/main_imu.py|code to rebuild imu_only models|
 |source/main_all.py|code to rebuild all_sensor models|
-|source/config.py|params to be setted|
+|source/config.py|params to be set|
 |source/util/inference.py|code to generate predictions from trained model|
 
 
@@ -37,7 +37,7 @@ Python packages are detailed separately in `requirements.txt`
 Below are the shell commands used in each step, as run from the top level directory  
 The directory below should be consistent with config.py
 ```sh
-# Prepare data. check if your data have been put in `/cmi-detect-behavior-with-sensor-data`(can be setted in Config of main_imu.py and main_all.py)
+# Prepare data. check if your data have been put in `/cmi-detect-behavior-with-sensor-data`(can be set in config.py)
 kaggle competitions download -c cmi-detect-behavior-with-sensor-data
 kaggle competitions download -c cmi-detect-behavior-with-sensor-data
 kaggle competitions download -c cmi-detect-behavior-with-sensor-data
@@ -49,7 +49,7 @@ python project_init.py
 
 ```
 # Train
-1. The files in `model_dir`(default 'model/all_sensor/seed_x' and 'model/only_IMU/seed_x')setted in config.py, could be overwrite.
+1. The files in `model_dir`(default 'model/all_sensor/seed_x' and 'model/only_IMU/seed_x')set in config.py, could be overwrite.
 **==Make sure the file in these directories have been backedup if you still need.==**
 ``` sh
 cd source
